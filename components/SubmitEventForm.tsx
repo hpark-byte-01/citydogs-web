@@ -27,15 +27,16 @@ export default function SubmitEventForm() {
     const priceStr = (fd.get("price") as string) || null;
     const price = isFree ? 0 : priceStr ? parseFloat(priceStr) : null;
 
-    // Photo upload
-    let photoUrl: string | null = null;
-    const photoFile = fd.get("photo") as File | null;
-    if (photoFile && photoFile.size > 0) {
-      const ext = photoFile.name.split(".").pop();
-      const path = `event-submissions/${Date.now()}.${ext}`;
+    // Photo uploads (up to 10)
+    const photoUrls: string[] = [];
+    const photoFiles = fd.getAll("photos") as File[];
+    for (const file of photoFiles) {
+      if (!file || file.size === 0) continue;
+      const ext = file.name.split(".").pop();
+      const path = `event-submissions/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
       const { error: uploadError } = await supabase.storage
         .from("dog-event-photos-submitted")
-        .upload(path, photoFile);
+        .upload(path, file);
 
       if (uploadError) {
         setError("Photo upload failed. Please try again.");
@@ -46,7 +47,7 @@ export default function SubmitEventForm() {
       const { data: urlData } = supabase.storage
         .from("dog-event-photos-submitted")
         .getPublicUrl(path);
-      photoUrl = urlData.publicUrl;
+      photoUrls.push(urlData.publicUrl);
     }
 
     const { error: insertError } = await supabase
@@ -60,7 +61,7 @@ export default function SubmitEventForm() {
         venue_address: venueAddress,
         website_url: websiteUrl,
         price,
-        photo_url: photoUrl,
+        photo_urls: photoUrls.length > 0 ? photoUrls : null,
       });
 
     if (insertError) {
@@ -121,7 +122,7 @@ export default function SubmitEventForm() {
 
       <Field label="Event Date & Time" name="event_date" type="datetime-local" />
       <Field label="Venue Address" name="venue_address" />
-      <Field label="Website URL" name="website_url" type="url" placeholder="https://" />
+      <Field label="Event Website URL" name="website_url" type="url" placeholder="https://" />
 
       <div>
         <label className="mb-1 block text-sm font-semibold text-navy">
@@ -144,7 +145,7 @@ export default function SubmitEventForm() {
               onChange={() => setIsFree(false)}
               className="accent-navy"
             />
-            Paid
+            Ticketed
           </label>
         </div>
         {!isFree && (
@@ -161,12 +162,21 @@ export default function SubmitEventForm() {
 
       <div>
         <label className="mb-1 block text-sm font-semibold text-navy">
-          Photo (optional)
+          Photos (optional, up to 10)
         </label>
         <input
-          name="photo"
+          name="photos"
           type="file"
           accept="image/*"
+          multiple
+          onChange={(e) => {
+            if (e.target.files && e.target.files.length > 10) {
+              setError("You can upload up to 10 photos.");
+              e.target.value = "";
+            } else {
+              setError(null);
+            }
+          }}
           className="w-full text-sm text-navy/60 file:mr-3 file:rounded-lg file:border-0 file:bg-navy/10 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-navy hover:file:bg-navy/20"
         />
       </div>
