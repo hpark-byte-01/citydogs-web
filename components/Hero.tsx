@@ -27,7 +27,7 @@ export default function Hero() {
 
       <a
         href="#"
-        className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-navy px-8 py-4 text-base font-bold text-white shadow-md transition hover:bg-navy/90 active:scale-[0.98]"
+        className="mt-8 inline-flex w-72 items-center justify-center gap-2 rounded-2xl bg-navy px-8 py-4 text-base font-bold text-white shadow-md transition hover:bg-navy/90 active:scale-[0.98]"
       >
         <svg
           className="h-5 w-5"

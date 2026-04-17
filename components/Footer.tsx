@@ -16,12 +16,6 @@ export default function Footer() {
           <a href="/submit-event" className="hover:text-navy transition">
             Submit Event
           </a>
-          <a
-            href="mailto:hello@citydogs.ai"
-            className="hover:text-navy transition"
-          >
-            Contact
-          </a>
         </nav>
 
         <p className="text-xs text-navy/40">
