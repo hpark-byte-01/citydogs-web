@@ -1,14 +1,11 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
-import UpcomingEvents from "@/components/UpcomingEvents";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Features />
-      <UpcomingEvents />
 
       {/* Business CTA */}
       <section className="px-6 py-16 text-center">
@@ -26,6 +23,7 @@ export default function Home() {
         </a>
       </section>
 
+      <Features />
       <Footer />
     </>
   );

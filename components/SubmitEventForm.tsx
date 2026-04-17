@@ -25,7 +25,6 @@ export default function SubmitEventForm() {
     const timezone = fd.get("timezone") as string;
     const venueAddress = (fd.get("venue_address") as string) || null;
     const websiteUrl = (fd.get("website_url") as string) || null;
-    const avatarUrl = (fd.get("avatar_url") as string) || null;
     const priceStr = (fd.get("price") as string) || null;
     const price = isFree ? 0 : priceStr ? parseFloat(priceStr) : null;
 
@@ -67,7 +66,6 @@ export default function SubmitEventForm() {
         timezone,
         venue_address: venueAddress,
         website_url: websiteUrl,
-        avatar_url: avatarUrl,
         price,
         photo_urls: photoUrls.length > 0 ? photoUrls : null,
       });
@@ -150,20 +148,6 @@ export default function SubmitEventForm() {
       <Field label="Venue Address" name="venue_address" placeholder="Copy & paste from Google Maps" />
       <Field label="Event Website URL" name="website_url" type="url" placeholder="https://" />
 
-      <div>
-        <label className="mb-1 block text-sm font-semibold text-navy">
-          Avatar URL
-        </label>
-        <p className="mb-2 text-xs text-navy/50">
-          Avatar of your organization that will be shown on our map. Provide your company logo or emblem.
-        </p>
-        <input
-          name="avatar_url"
-          type="url"
-          placeholder="https://"
-          className="w-full rounded-xl border border-navy/15 px-4 py-3 text-sm outline-none transition focus:border-navy/40 focus:ring-1 focus:ring-navy/20"
-        />
-      </div>
 
       <div>
         <label className="mb-1 block text-sm font-semibold text-navy">

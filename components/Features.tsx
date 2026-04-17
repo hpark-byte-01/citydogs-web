@@ -1,9 +1,9 @@
 const features = [
   {
-    title: "Bark Feed",
+    title: "Play Dates",
     description:
-      "Share photos and updates about your pup. Like, comment, and connect with fellow dog parents nearby.",
-    icon: "🐾",
+      "Set up play dates with nearby dogs. Find the perfect playmate for your pup and let them socialize.",
+    icon: "🐕",
   },
   {
     title: "Dog Events",
