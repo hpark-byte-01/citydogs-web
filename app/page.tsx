@@ -17,7 +17,7 @@ export default function Home() {
         </p>
         <a
           href="/submit-event"
-          className="mt-6 inline-flex items-center justify-center gap-2 rounded-2xl bg-navy px-14 py-4 text-base font-bold text-white shadow-md transition hover:bg-navy/90 active:scale-[0.98]"
+          className="mt-6 inline-flex items-center justify-center gap-2 rounded-2xl bg-navy px-20 py-4 text-base font-bold text-white shadow-md transition hover:bg-navy/90 active:scale-[0.98]"
         >
           Submit Your Event
         </a>
