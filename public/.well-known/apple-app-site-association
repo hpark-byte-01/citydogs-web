@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["BKUQY73A64.com.citydogs.app"],
+        "paths": ["/bark/*", "/event/*"]
+      }
+    ]
+  }
+}
