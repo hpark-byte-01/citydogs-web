@@ -4,7 +4,7 @@
     "details": [
       {
         "appIDs": ["BKUQY73A64.com.citydogs.app"],
-        "paths": ["/bark/*", "/event/*"]
+        "paths": ["/bark/*", "/event/*", "/playdate/*"]
       }
     ]
   }
