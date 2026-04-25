@@ -1,45 +1,190 @@
-import Image from "next/image";
+import Stamp from "./Stamp";
+import AppStoreBadge from "./AppStoreBadge";
+import MapPosterPreview from "./MapPosterPreview";
+
+const ACCENT = "#B54A2C";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center px-6 pt-16 pb-12 text-center">
-      <Image
-        src="/icon.png"
-        alt="CityDogs logo"
-        width={140}
-        height={140}
-        className="rounded-3xl shadow-lg"
-        priority
-      />
-
-      <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
-        CityDogs
-      </h1>
-
-      <p className="mt-3 text-xl font-display text-navy/70 sm:text-2xl">
-        when you want more dogs in your life
-      </p>
-
-      <p className="mt-6 max-w-md text-base text-navy/60 leading-relaxed">
-        Discover dog-friendly events, share walks, and connect with a community
-        of dog lovers in your city.
-      </p>
-
-      <a
-        href="#"
-        className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-navy px-8 py-4 text-base font-bold text-white shadow-md transition hover:bg-navy/90 active:scale-[0.98]"
-      >
-        <svg
-          className="h-5 w-5"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          aria-hidden="true"
+    <section
+      className="px-6 sm:px-14 grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-12"
+      style={{
+        paddingTop: 44,
+        paddingBottom: 36,
+        borderBottom: "1.5px solid #1A1410",
+      }}
+    >
+      {/* Left column */}
+      <div>
+        {/* Eyebrow */}
+        <div
+          className="font-sans flex items-center gap-2.5"
+          style={{
+            fontSize: 11,
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            fontWeight: 700,
+            color: ACCENT,
+            marginBottom: 14,
+          }}
         >
-          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-        </svg>
-        Download on the App Store
-      </a>
-      <span className="mt-2 text-xs text-navy/40">Coming soon to the App Store</span>
+          <Stamp icon="earth" size={18} tint={ACCENT} />
+          The Front Page
+        </div>
+
+        {/* Headline */}
+        <h2
+          className="font-serif"
+          style={{
+            fontSize: "clamp(42px, 6vw, 72px)",
+            lineHeight: 0.95,
+            letterSpacing: "-0.02em",
+            margin: "0 0 22px",
+            fontWeight: 400,
+          }}
+        >
+          Find your pup&rsquo;s{" "}
+          <em style={{ fontStyle: "italic", color: ACCENT }}>people</em>,
+          <br />a block at a time.
+        </h2>
+
+        {/* Body */}
+        <p
+          className="font-body"
+          style={{
+            fontSize: 19,
+            lineHeight: 1.55,
+            maxWidth: 520,
+            color: "#2D241D",
+            margin: "0 0 28px",
+          }}
+        >
+          Playdates around the corner. A neighbor who&rsquo;ll walk your dog on
+          Thursday, for pay or just for kicks. Friends who get why you keep
+          seven kinds of bully stick. CityDogs is the app for New York dog
+          owners, building real community one sidewalk hello at a time.
+        </p>
+
+        {/* CTA */}
+        <div
+          style={{
+            display: "flex",
+            gap: 14,
+            alignItems: "center",
+            marginBottom: 24,
+            flexWrap: "wrap",
+          }}
+        >
+          <AppStoreBadge big />
+          <a
+            href="/submit-event"
+            className="dotted font-sans"
+            style={{ fontSize: 14, fontWeight: 500 }}
+          >
+            or submit an event →
+          </a>
+        </div>
+
+        {/* Pull quote */}
+        <div
+          style={{
+            borderTop: "1px solid rgba(26,20,16,0.3)",
+            borderBottom: "1px solid rgba(26,20,16,0.3)",
+            padding: "18px 0",
+            marginTop: 28,
+            maxWidth: 540,
+          }}
+        >
+          <div
+            className="font-serif"
+            style={{
+              fontSize: 22,
+              lineHeight: 1.3,
+              fontStyle: "italic",
+              color: "#1A1410",
+            }}
+          >
+            &ldquo;I met my best friend on the app. Our dogs met first.&rdquo;
+          </div>
+          <div
+            className="font-sans"
+            style={{
+              fontSize: 11,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              marginTop: 10,
+              color: "#8B7E6A",
+              fontWeight: 600,
+            }}
+          >
+            Ana &amp; Biscuit, Fort Greene
+          </div>
+        </div>
+      </div>
+
+      {/* Right column — Phone mockup */}
+      <div
+        className="relative flex justify-center"
+        style={{ paddingTop: 12 }}
+      >
+        {/* Annotation: top-right */}
+        <div
+          className="font-hand hidden lg:block"
+          style={{
+            position: "absolute",
+            top: -40,
+            right: -10,
+            fontSize: 20,
+            color: ACCENT,
+            transform: "rotate(-6deg)",
+            textAlign: "center",
+            lineHeight: 1.1,
+          }}
+        >
+          every event,
+          <br />
+          on the map
+          <div style={{ marginTop: 2 }}>
+            <svg width="40" height="30" viewBox="0 0 40 30">
+              <path
+                d="M35 5 Q 20 10, 8 25"
+                stroke={ACCENT}
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+              />
+              <path
+                d="M4 22 L 8 25 L 10 20"
+                stroke={ACCENT}
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <MapPosterPreview />
+
+        {/* Annotation: bottom-left */}
+        <div
+          className="font-hand hidden lg:block"
+          style={{
+            position: "absolute",
+            bottom: -10,
+            left: -70,
+            fontSize: 17,
+            color: "#1A1410",
+            transform: "rotate(-3deg)",
+            maxWidth: 200,
+            lineHeight: 1.2,
+          }}
+        >
+          tap a pin, swipe
+          <br />
+          through the posters
+        </div>
+      </div>
     </section>
   );
 }
