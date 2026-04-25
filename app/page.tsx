@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-[1120px]">
+    <div className="mx-auto w-full max-w-[1320px]">
       <Masthead />
       <Hero />
       <Classifieds />

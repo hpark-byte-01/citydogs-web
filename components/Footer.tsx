@@ -5,10 +5,10 @@ const ACCENT = "#B54A2C";
 export default function Footer() {
   return (
     <footer
-      className="px-6 sm:px-14 flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center"
+      className="px-6 sm:px-16 flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center"
       style={{
-        paddingTop: 28,
-        paddingBottom: 28,
+        paddingTop: 32,
+        paddingBottom: 32,
         borderTop: "1.5px solid #1A1410",
         background: "#1A1410",
         color: "#F2EBDA",
@@ -19,7 +19,7 @@ export default function Footer() {
         <div
           className="font-serif"
           style={{
-            fontSize: 28,
+            fontSize: 32,
             letterSpacing: "-0.01em",
           }}
         >
@@ -41,8 +41,8 @@ export default function Footer() {
 
       {/* Right */}
       <div
-        className="font-sans flex flex-wrap gap-5 items-center"
-        style={{ fontSize: 13 }}
+        className="font-sans flex flex-wrap gap-6.5 items-center"
+        style={{ fontSize: 14 }}
       >
         <a
           href="https://instagram.com/citydogs.ai"

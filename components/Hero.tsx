@@ -7,10 +7,10 @@ const ACCENT = "#B54A2C";
 export default function Hero() {
   return (
     <section
-      className="px-6 sm:px-14 grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-12"
+      className="px-6 sm:px-16 grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-14"
       style={{
-        paddingTop: 44,
-        paddingBottom: 36,
+        paddingTop: 52,
+        paddingBottom: 44,
         borderBottom: "1.5px solid #1A1410",
       }}
     >
@@ -36,10 +36,10 @@ export default function Hero() {
         <h2
           className="font-serif"
           style={{
-            fontSize: "clamp(42px, 6vw, 72px)",
+            fontSize: "clamp(42px, 6vw, 84px)",
             lineHeight: 0.95,
             letterSpacing: "-0.02em",
-            margin: "0 0 22px",
+            margin: "0 0 26px",
             fontWeight: 400,
           }}
         >
@@ -52,11 +52,11 @@ export default function Hero() {
         <p
           className="font-body"
           style={{
-            fontSize: 19,
+            fontSize: 21,
             lineHeight: 1.55,
-            maxWidth: 520,
+            maxWidth: 600,
             color: "#2D241D",
-            margin: "0 0 28px",
+            margin: "0 0 32px",
           }}
         >
           Playdates around the corner. A neighbor who&rsquo;ll walk your dog on
@@ -90,15 +90,15 @@ export default function Hero() {
           style={{
             borderTop: "1px solid rgba(26,20,16,0.3)",
             borderBottom: "1px solid rgba(26,20,16,0.3)",
-            padding: "18px 0",
-            marginTop: 28,
-            maxWidth: 540,
+            padding: "20px 0",
+            marginTop: 32,
+            maxWidth: 600,
           }}
         >
           <div
             className="font-serif"
             style={{
-              fontSize: 22,
+              fontSize: 24,
               lineHeight: 1.3,
               fontStyle: "italic",
               color: "#1A1410",

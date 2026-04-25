@@ -6,16 +6,16 @@ export default function EventSubmit() {
   return (
     <section
       id="events"
-      className="px-6 sm:px-14"
+      className="px-6 sm:px-16"
       style={{
-        paddingTop: 40,
-        paddingBottom: 46,
+        paddingTop: 48,
+        paddingBottom: 56,
         borderTop: "3px double #1A1410",
         background: "#EADFC7",
         position: "relative",
       }}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left column */}
         <div>
           {/* Eyebrow */}
@@ -37,10 +37,10 @@ export default function EventSubmit() {
           <h3
             className="font-serif"
             style={{
-              fontSize: "clamp(36px, 4.5vw, 54px)",
+              fontSize: "clamp(36px, 4.5vw, 62px)",
               lineHeight: 0.98,
               letterSpacing: "-0.02em",
-              margin: "0 0 18px",
+              margin: "0 0 20px",
               fontWeight: 400,
             }}
           >
@@ -52,11 +52,11 @@ export default function EventSubmit() {
           {/* Body */}
           <p
             style={{
-              fontSize: 17,
+              fontSize: 19,
               lineHeight: 1.55,
               color: "#2D241D",
-              maxWidth: 460,
-              margin: "0 0 24px",
+              maxWidth: 520,
+              margin: "0 0 28px",
             }}
           >
             Yappy hours, group walks, adoption days, puppy meetups. If it&rsquo;s

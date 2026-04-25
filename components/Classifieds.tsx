@@ -31,14 +31,14 @@ const columns = [
 
 export default function Classifieds() {
   return (
-    <section className="px-6 sm:px-14" style={{ paddingTop: 40, paddingBottom: 36 }}>
+    <section className="px-6 sm:px-16" style={{ paddingTop: 48, paddingBottom: 44 }}>
       {/* Section header */}
-      <div style={{ textAlign: "center", marginBottom: 30 }}>
+      <div style={{ textAlign: "center", marginBottom: 36 }}>
         <div className="masthead-rule">
           <h3
             className="font-serif"
             style={{
-              fontSize: 38,
+              fontSize: 44,
               margin: 0,
               fontWeight: 400,
               letterSpacing: "-0.01em",
@@ -74,14 +74,14 @@ export default function Classifieds() {
         {columns.map((f, i) => (
           <div
             key={f.kicker}
-            className="flex flex-col gap-2.5 border-t border-ink/30 first:border-t-0 md:border-t-0 md:border-l md:border-ink/30 md:first:border-l-0 xl:[&:nth-child(3)]:border-l"
-            style={{ padding: "22px 18px" }}
+            className="flex flex-col gap-3 border-t border-ink/30 first:border-t-0 md:border-t-0 md:border-l md:border-ink/30 md:first:border-l-0 xl:[&:nth-child(3)]:border-l"
+            style={{ padding: "26px 22px" }}
           >
-            <Stamp icon={f.icon} size={40} tint="ink" rotate={i % 2 ? -4 : 3} />
+            <Stamp icon={f.icon} size={44} tint="ink" rotate={i % 2 ? -4 : 3} />
             <div
               className="font-sans"
               style={{
-                fontSize: 10,
+                fontSize: 11,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
                 color: ACCENT,
@@ -94,7 +94,7 @@ export default function Classifieds() {
             <div
               className="font-serif"
               style={{
-                fontSize: 24,
+                fontSize: 27,
                 lineHeight: 1.05,
                 letterSpacing: "-0.01em",
               }}
@@ -103,8 +103,8 @@ export default function Classifieds() {
             </div>
             <div
               style={{
-                fontSize: 14,
-                lineHeight: 1.5,
+                fontSize: 15,
+                lineHeight: 1.55,
                 color: "#2D241D",
               }}
             >

@@ -3,10 +3,10 @@ import Stamp from "./Stamp";
 export default function Masthead() {
   return (
     <header
-      className="px-6 sm:px-14"
+      className="px-6 sm:px-16"
       style={{
-        paddingTop: 28,
-        paddingBottom: 18,
+        paddingTop: 32,
+        paddingBottom: 22,
         borderBottom: "3px double #1A1410",
       }}
     >
@@ -41,10 +41,10 @@ export default function Masthead() {
       <h1
         className="font-serif"
         style={{
-          fontSize: "clamp(72px, 12vw, 138px)",
+          fontSize: "clamp(72px, 12vw, 152px)",
           letterSpacing: "-0.035em",
           lineHeight: 0.9,
-          margin: "6px 0 25px",
+          margin: "6px 0 28px",
           fontWeight: 400,
         }}
       >
@@ -55,7 +55,7 @@ export default function Masthead() {
       <div
         className="flex justify-between items-center font-sans"
         style={{
-          fontSize: 12,
+          fontSize: 13,
           letterSpacing: "0.16em",
           textTransform: "uppercase",
           fontWeight: 500,
