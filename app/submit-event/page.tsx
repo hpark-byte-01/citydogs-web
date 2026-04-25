@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import SubmitEventForm from "@/components/SubmitEventForm";
-import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,16 +12,7 @@ export default function SubmitEventPage() {
   return (
     <>
       <header className="flex flex-col items-center px-6 pt-12 pb-8 text-center">
-        <a href="/">
-          <Image
-            src="/icon.png"
-            alt="CityDogs logo"
-            width={64}
-            height={64}
-            className="rounded-xl"
-          />
-        </a>
-        <h1 className="mt-4 text-3xl font-extrabold text-navy">
+        <h1 className="text-3xl font-extrabold text-navy">
           Submit Your Event
         </h1>
         <p className="mt-2 max-w-md text-navy/60">
