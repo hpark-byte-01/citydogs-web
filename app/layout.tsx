@@ -29,11 +29,11 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://citydogs.ai"),
-  title: "CityDogs — a community paper for dogs & their people",
+  title: "CityDogs",
   description:
     "CityDogs connects dog lovers with local dog events, walks, and a community that celebrates our four-legged friends. Available on iOS.",
   openGraph: {
-    title: "CityDogs — a community paper for dogs & their people",
+    title: "CityDogs",
     description:
       "Playdates around the corner. Friends who get why you keep seven kinds of bully stick. CityDogs is the app for New York dog owners.",
     images: ["/og-image.png"],

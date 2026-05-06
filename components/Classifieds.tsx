@@ -58,7 +58,6 @@ export default function Classifieds() {
             fontWeight: 500,
           }}
         >
-          four columns · read in any order
         </div>
       </div>
 

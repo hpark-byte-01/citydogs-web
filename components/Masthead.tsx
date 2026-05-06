@@ -61,7 +61,6 @@ export default function Masthead() {
           fontWeight: 500,
         }}
       >
-        <span>A community paper for dogs &amp; their people</span>
         <span>citydogs.ai</span>
       </div>
     </header>
